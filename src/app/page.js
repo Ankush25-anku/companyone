@@ -42,7 +42,7 @@ export default function Home() {
       <MarqueeImages />
       <AwardsPublications />
       <TestimonialsSlider />
-      <PartnersMarquee />
+
       <PartnersCards />
       <BlogPreview />
       <CTASection />

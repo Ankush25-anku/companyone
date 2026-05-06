@@ -8752,6 +8752,264 @@ form textarea:required:valid {
   animation: spin 16s linear infinite;
 }
 
+/* =========================================
+   FULL MOBILE RESPONSIVE FIX
+========================================= */
+@media only screen and (max-width: 767px) {
+  /* =========================
+     GLOBAL
+  ========================= */
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    min-width: 320px;
+  }
+
+  .mxd-section,
+  .mxd-container,
+  .mxd-hero-01,
+  .mxd-hero-01__wrap {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  /* =========================
+     HERO SECTION
+  ========================= */
+  .mxd-hero-section {
+    padding-top: 6rem;
+  }
+
+  .mxd-hero-01__wrap {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+
+  .mxd-hero-01__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  /* =========================
+     HERO TITLE
+  ========================= */
+  .mxd-hero-01__title-wrap {
+    width: 100%;
+  }
+
+  .hero-01-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    gap: 1.2rem;
+
+    margin-top: 2rem;
+  }
+
+  .hero-01-title__row {
+    display: flex !important;
+    flex-direction: row !important;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: nowrap !important;
+
+    width: 100%;
+
+    gap: 1rem;
+
+    text-align: center;
+  }
+
+  .hero-01-title__item {
+    display: inline-flex;
+
+    font-size: 3rem;
+    line-height: 1.1;
+
+    white-space: nowrap;
+  }
+
+  .title-item-transparent {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+
+    border-radius: 999px;
+  }
+
+  /* =========================
+     MARQUEE
+  ========================= */
+  .mxd-hero-01__marquee {
+    position: relative;
+
+    width: 100%;
+    max-width: 360px;
+
+    height: 48px;
+
+    margin: 0 auto;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+  }
+
+  .mxd-hero-01__marquee .marquee {
+    width: max-content;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .mxd-hero-01__marquee .marquee__toright {
+    display: flex;
+    align-items: center;
+
+    width: max-content;
+
+    gap: 1.5rem;
+  }
+
+  .mxd-hero-01__marquee .marquee__item.item-regular {
+    display: flex;
+    align-items: center;
+
+    gap: 0.8rem;
+
+    flex-shrink: 0;
+  }
+
+  .mxd-hero-01__marquee .marquee__item.item-regular p {
+    margin: 0;
+
+    font-size: 1.8rem;
+    line-height: 1;
+
+    white-space: nowrap;
+  }
+
+  .mxd-hero-01__marquee .marquee__item.item-regular svg {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    flex-shrink: 0;
+  }
+
+  .marquee-flex {
+    gap: 1rem;
+  }
+
+  /* =========================
+     WHATSAPP FLOATING
+  ========================= */
+  .whatsapp-floating {
+    width: 32px;
+    height: 32px;
+
+    top: -6px;
+    right: -2px;
+  }
+
+  .whatsapp-floating img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* =========================
+     FLOATING HERO IMAGES
+  ========================= */
+  .hero-01-image.image-01 {
+    width: 65px;
+
+    top: -6%;
+    left: -2%;
+  }
+
+  .hero-01-image.image-03 {
+    width: 45px;
+
+    top: 88%;
+    left: 8%;
+  }
+
+  /* =========================
+     VIDEO SECTION
+  ========================= */
+  .mxd-hero-01__video-wrap {
+    width: 100%;
+
+    margin-top: 2rem;
+
+    border-radius: 2rem;
+
+    overflow: hidden;
+  }
+
+  .mxd-hero-01__video {
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+  }
+
+  /* =========================
+     BOTTOM CONTENT
+  ========================= */
+  .mxd-hero-01__data-wrap {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+
+    text-align: center;
+  }
+
+  .mxd-hero-01__data-descr {
+    margin-top: 1.5rem;
+  }
+
+  .mxd-hero-01__data-descr p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    font-size: 1.4rem;
+    line-height: 1.7;
+  }
+
+  /* =========================
+     ROTATING BUTTON
+  ========================= */
+  .btn-rotating {
+    width: 80px;
+    height: 80px;
+  }
+
+  .btn-rotating__image {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* =========================
+     FIX OVERFLOW
+  ========================= */
+  .hero-01-title,
+  .hero-01-title__row,
+  .mxd-hero-01__top,
+  .mxd-hero-01__wrap {
+    overflow: hidden;
+  }
+}
 /* ------------------------------------------------*/
 /* Block - Hero Section #01 End */
 /* ------------------------------------------------*/
