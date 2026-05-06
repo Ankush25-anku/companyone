@@ -8753,263 +8753,213 @@ form textarea:required:valid {
 }
 
 /* =========================================
-   FULL MOBILE RESPONSIVE FIX
+   MOBILE HERO ORDER FIX
 ========================================= */
+/* =========================================
+   MOBILE HERO FIX
+========================================= */
+
 @media only screen and (max-width: 767px) {
-  /* =========================
-     GLOBAL
-  ========================= */
-  html,
   body {
-    width: 100%;
     overflow-x: hidden;
   }
 
-  body {
-    min-width: 320px;
-  }
-
-  .mxd-section,
-  .mxd-container,
-  .mxd-hero-01,
-  .mxd-hero-01__wrap {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  /* =========================
-     HERO SECTION
-  ========================= */
-  .mxd-hero-section {
-    padding-top: 6rem;
-  }
+  /* =========================================
+     HERO WRAPPER
+  ========================================= */
 
   .mxd-hero-01__wrap {
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
+    padding: 0 1.6rem;
   }
 
   .mxd-hero-01__top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 4rem 0 4rem 0;
   }
 
-  /* =========================
-     HERO TITLE
-  ========================= */
   .mxd-hero-01__title-wrap {
+    position: relative;
     width: 100%;
+    padding-top: 0;
   }
+
+  .mxd-hero-01 {
+    overflow: hidden;
+  }
+
+  /* =========================================
+     WE TECH
+  ========================================= */
 
   .hero-01-title {
+    position: relative;
+    z-index: 20;
+
     display: flex;
     flex-direction: column;
-    align-items: center;
 
-    width: 100%;
+    gap: 0;
 
-    gap: 1.2rem;
-
-    margin-top: 2rem;
+    margin-top: 0;
+    padding-top: 0;
   }
 
-  .hero-01-title__row {
-    display: flex !important;
+  .hero-01-title__row:first-child {
+    display: flex;
     flex-direction: row !important;
 
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
 
-    flex-wrap: nowrap !important;
+    gap: 8px;
 
-    width: 100%;
-
-    gap: 1rem;
-
-    text-align: center;
+    margin-bottom: 82px; /* space for marquee */
   }
 
-  .hero-01-title__item {
-    display: inline-flex;
-
-    font-size: 3rem;
-    line-height: 1.1;
-
-    white-space: nowrap;
+  .hero-01-title__row:first-child .hero-01-title__item {
+    font-size: 3.2rem;
+    line-height: 1;
   }
 
-  .title-item-transparent {
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
+  /* TECH PILL */
+  .hero-01-title__item.title-item-transparent {
+    opacity: 1 !important;
+
+    background: #9b87f5;
+    color: #fff;
+
+    padding: 5px 14px;
 
     border-radius: 999px;
   }
 
-  /* =========================
+  /* =========================================
      MARQUEE
-  ========================= */
+  ========================================= */
+
   .mxd-hero-01__marquee {
-    position: relative;
+    position: absolute !important;
+
+    top: 50px;
+    left: 0;
 
     width: 100%;
-    max-width: 360px;
+    height: 58px;
 
-    height: 48px;
-
-    margin: 0 auto;
+    z-index: 1;
 
     border-radius: 999px;
 
     overflow: hidden;
   }
 
-  .mxd-hero-01__marquee .marquee {
-    width: max-content;
-
-    display: flex;
-    align-items: center;
-  }
-
-  .mxd-hero-01__marquee .marquee__toright {
-    display: flex;
-    align-items: center;
-
-    width: max-content;
-
-    gap: 1.5rem;
+  /* marquee spacing */
+  .mxd-hero-01__marquee .marquee-flex {
+    gap: 1.2rem;
   }
 
   .mxd-hero-01__marquee .marquee__item.item-regular {
-    display: flex;
-    align-items: center;
-
-    gap: 0.8rem;
-
-    flex-shrink: 0;
+    gap: 1rem;
   }
 
+  /* DESKTOP STYLE TEXT */
   .mxd-hero-01__marquee .marquee__item.item-regular p {
-    margin: 0;
+    font: normal var(--fw-medium) 6rem/1.1 var(--_font-accent);
 
-    font-size: 1.8rem;
-    line-height: 1;
+    color: var(--t-opp-bright);
 
     white-space: nowrap;
   }
 
+  /* DESKTOP STYLE ICON */
   .mxd-hero-01__marquee .marquee__item.item-regular svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 3.2rem;
+    height: 3.2rem;
 
-    flex-shrink: 0;
+    fill: currentColor;
   }
 
-  .marquee-flex {
-    gap: 1rem;
+  /* =========================================
+     SOLVE REAL PROBLEMS
+  ========================================= */
+
+  .hero-01-title__row:last-child {
+    justify-content: flex-start;
+    text-align: left;
+
+    margin-top: -4px;
   }
 
-  /* =========================
-     WHATSAPP FLOATING
-  ========================= */
+  .hero-01-title__row:last-child .hero-01-title__item {
+    font-size: 3.8rem;
+    line-height: 1.05;
+  }
+
+  /* =========================================
+     WHATSAPP ICON
+  ========================================= */
+
   .whatsapp-floating {
-    width: 32px;
-    height: 32px;
+    width: 52px;
+    height: 52px;
 
-    top: -6px;
-    right: -2px;
+    top: -34px;
+    right: 1rem;
+
+    z-index: 30;
   }
 
-  .whatsapp-floating img {
-    width: 16px;
-    height: 16px;
-  }
-
-  /* =========================
-     FLOATING HERO IMAGES
-  ========================= */
-  .hero-01-image.image-01 {
-    width: 65px;
-
-    top: -6%;
-    left: -2%;
-  }
-
-  .hero-01-image.image-03 {
-    width: 45px;
-
-    top: 88%;
-    left: 8%;
-  }
-
-  /* =========================
-     VIDEO SECTION
-  ========================= */
-  .mxd-hero-01__video-wrap {
+  .whatsapp-floating img,
+  .whatsapp-floating svg {
     width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
 
+  /* =========================================
+     VIDEO
+  ========================================= */
+
+  .mxd-hero-01__video-wrap {
     margin-top: 2rem;
 
     border-radius: 2rem;
-
     overflow: hidden;
   }
 
   .mxd-hero-01__video {
-    width: 100%;
-    height: auto;
-
-    object-fit: cover;
+    border-radius: 2rem;
   }
 
-  /* =========================
-     BOTTOM CONTENT
-  ========================= */
+  /* =========================================
+     FLOATING IMAGES
+  ========================================= */
+
+  .hero-01-image.image-01 {
+    width: 100px;
+
+    top: -45px;
+    left: -10px;
+  }
+
+  .hero-01-image.image-03 {
+    display: none;
+  }
+
+  /* =========================================
+     DATA SECTION
+  ========================================= */
+
   .mxd-hero-01__data-wrap {
-    padding-top: 3rem;
-    padding-bottom: 2rem;
-
-    text-align: center;
-  }
-
-  .mxd-hero-01__data-descr {
-    margin-top: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 8rem;
   }
 
   .mxd-hero-01__data-descr p {
-    padding-left: 1rem;
-    padding-right: 1rem;
-
-    font-size: 1.4rem;
-    line-height: 1.7;
-  }
-
-  /* =========================
-     ROTATING BUTTON
-  ========================= */
-  .btn-rotating {
-    width: 80px;
-    height: 80px;
-  }
-
-  .btn-rotating__image {
-    width: 32px;
-    height: 32px;
-  }
-
-  /* =========================
-     FIX OVERFLOW
-  ========================= */
-  .hero-01-title,
-  .hero-01-title__row,
-  .mxd-hero-01__top,
-  .mxd-hero-01__wrap {
-    overflow: hidden;
+    font-size: 1.5rem;
+    line-height: 1.6;
   }
 }
+
 /* ------------------------------------------------*/
 /* Block - Hero Section #01 End */
 /* ------------------------------------------------*/
