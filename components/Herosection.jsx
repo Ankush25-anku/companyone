@@ -38,7 +38,7 @@ export default function HeroSection() {
                   <div className="marquee__toright marquee-flex">
                     {[...Array(12)].map((_, i) => (
                       <div key={i} className="marquee__item item-regular text">
-                        <p>build digital products that</p>
+                        <p>digital products that</p>
 
                         <svg viewBox="0 0 80 80" fill="currentColor">
                           <path
@@ -63,22 +63,19 @@ export default function HeroSection() {
               </div>
 
               {/* ✅ WHATSAPP ICON HERE */}
-          <div className="whatsapp-floating">
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-    alt="WhatsApp"
-  />
-</div>
+              <div className="whatsapp-floating">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                  alt="WhatsApp"
+                />
+              </div>
 
               {/* ✅ ADD HERE */}
 
               {/* TITLE */}
               <h1 className="hero-01-title">
                 <span className="hero-01-title__row loading__item">
-                  <em className="hero-01-title__item">We</em>
-                  <em className="hero-01-title__item title-item-transparent">
-                    tech
-                  </em>
+                  <em className="hero-01-title__item">We build</em>
                 </span>
 
                 <span className="hero-01-title__row loading__item">
@@ -87,6 +84,7 @@ export default function HeroSection() {
                       <path d="M19.6,9.6h-3.9..." />
                     </svg>
                   </em>
+
                   <em className="hero-01-title__item">solve real problems</em>
                 </span>
               </h1>
