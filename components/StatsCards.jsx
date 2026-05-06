@@ -8,13 +8,12 @@ export default function StatsCards() {
           <div className="mxd-stats-cards">
             <div className="container-fluid px-0">
               <div className="row gx-0">
-
                 {/* item 1 */}
                 <div className="col-12 col-xl-5 mxd-stats-cards__item mxd-grid-item anim-uni-scale-in-right">
                   <div className="mxd-stats-cards__inner align-end bg-accent radius-m padding-4">
                     <div className="mxd-counter align-end">
                       <p className="mxd-counter__number mxd-stats-number opposite">
-                        0
+                        50+
                       </p>
                       <p className="mxd-counter__descr t-140 t-bright opposite">
                         Schools & businesses
@@ -43,7 +42,9 @@ export default function StatsCards() {
                 <div className="col-12 col-xl-7 mxd-stats-cards__item mxd-grid-item anim-uni-scale-in-left">
                   <div className="mxd-stats-cards__inner align-end bg-base-tint radius-m padding-4">
                     <div className="mxd-counter align-end">
-                      <p className="mxd-counter__number mxd-stats-number">0</p>
+                      <p className="mxd-counter__number mxd-stats-number">
+                        60+
+                      </p>
                       <p className="mxd-counter__descr t-140 t-bright">
                         Clients returning for
                         <br />
@@ -61,10 +62,12 @@ export default function StatsCards() {
                 <div className="col-12 col-xl-7 mxd-stats-cards__item mxd-grid-item anim-uni-scale-in-right">
                   <div className="mxd-stats-cards__inner bg-base-tint radius-m padding-4">
                     <div className="mxd-counter">
-                      <p className="mxd-counter__number mxd-stats-number">0</p>
+                      <p className="mxd-counter__number mxd-stats-number">
+                        10+
+                      </p>
                       <p className="mxd-counter__descr t-140 t-bright">
-                        Experience in building ERP systems,
-                        websites, and scalable digital solutions
+                        Experience in building ERP systems, websites, and
+                        scalable digital solutions
                       </p>
                     </div>
 
@@ -78,7 +81,9 @@ export default function StatsCards() {
                 <div className="col-12 col-xl-5 mxd-stats-cards__item mxd-grid-item anim-uni-scale-in-left">
                   <div className="mxd-stats-cards__inner bg-base-tint radius-m padding-4">
                     <div className="mxd-counter">
-                      <p className="mxd-counter__number mxd-stats-number">0</p>
+                      <p className="mxd-counter__number mxd-stats-number">
+                        60+
+                      </p>
                       <p className="mxd-counter__descr t-140 t-bright">
                         Successfully delivered ERP,
                         <br />
@@ -101,7 +106,6 @@ export default function StatsCards() {
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
