@@ -2,9 +2,8 @@ import Image from "next/image";
 // import Loader from "../../components/page";
 // import Menu from "../../components/Menu";
 
-import Hero from "../../components/Hero";
+// import Hero from "../../components/Hero";
 // import DemoList from "../../components/DemoList";
-
 
 import ParallaxDivider from "../../components/ParallaxDivider";
 import AboutSection from "../../components/AboutSection";
@@ -18,18 +17,21 @@ import AwardsPublications from "../../components/AwardsPublications";
 import TestimonialsSlider from "../../components/TestimonialsSlider";
 import PartnersMarquee from "../../components/PartnersMarquee";
 import PartnersCards from "../../components/PartnersCards";
-import BlogPreview from "../../components/BlogPreview";
+
 import CTASection from "../../components/CTASection";
 
 import BackToTop from "../../components/BackToTop";
+import HeroSection from "../../components/Herosection";
+import BlogPreview from "../../components/BlogPreview";
 
 export default function Home() {
   return (
     <>
       {/* <Loader /> */}
       {/* <Menu /> */}
-  
-      <Hero />
+
+      {/* <Hero /> */}
+      <HeroSection />
       <ParallaxDivider />
       <AboutSection />
       <StatsCards />
@@ -46,7 +48,6 @@ export default function Home() {
       <CTASection />
 
       <BackToTop />
-      {/* <DemoList /> */}
     </>
   );
 }

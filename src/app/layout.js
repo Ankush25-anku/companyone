@@ -10,6 +10,15 @@ export const metadata = {
   title: "RCERP TECHNOLOGIES PVT LTD",
   description:
     "RCERP TECHNOLOGIES PVT LTD provides School ERP, websites, mobile apps and digital solutions.",
+
+  icons: {
+    icon: [
+      { url: "/assets/img/RClogo3.png", sizes: "32x32", type: "image/png" },
+      { url: "/assets/img/RClogo3.png", sizes: "16x16", type: "image/png" },
+    ],
+    shortcut: "/assets/img/RClogo3.png",
+    apple: "/assets/img/RClogo3.png",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -29,10 +38,11 @@ export default function RootLayout({ children }) {
       </head>
 
       <body suppressHydrationWarning={true}>
-        {/* ================= CORE LIBS ================= */}
+        {/* ================= CORE ================= */}
         <NavMenu />
         <Header />
 
+        {/* WhatsApp Button */}
         <a
           href="https://wa.me/917892104196"
           target="_blank"
@@ -42,82 +52,70 @@ export default function RootLayout({ children }) {
           <FaWhatsapp size={28} />
         </a>
 
-        {/* ✅ jQuery MUST load first */}
+        {/* ================= SCRIPTS ================= */}
+
+        {/* ✅ ONLY jQuery should be beforeInteractive */}
         <Script
           src="https://code.jquery.com/jquery-3.6.0.min.js"
           strategy="beforeInteractive"
         />
 
-        {/* Core template libs */}
-        <Script src="/assets/js/libs.min.js" strategy="beforeInteractive" />
-
-        {/* ================= REQUIRED PLUGINS ================= */}
-
+        {/* ✅ All others AFTER interactive */}
+        <Script src="/assets/js/libs.min.js" strategy="afterInteractive" />
         <Script
           src="/assets/countUp/countUp.umd.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
-
         <Script
           src="/assets/modernizr/modernizr.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
-
         <Script
           src="/assets/split-type/split-type.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
-
-        {/* ================= EXTRA ================= */}
 
         <Script
           src="https://cdn.jsdelivr.net/npm/lenis@1.0.29/dist/lenis.min.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
-
         <Script
           src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
-
         <Script
           src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
-
         <Script
           src="https://cdn.jsdelivr.net/npm/ukiyojs@4/dist/ukiyo.min.js"
-          strategy="beforeInteractive"
+          strategy="afterInteractive"
         />
 
-        {/* ================= GSAP ================= */}
-
+        {/* GSAP */}
         <Script
           src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"
           strategy="afterInteractive"
         />
-
         <Script
           src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"
           strategy="afterInteractive"
         />
-
         <Script
           src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/Flip.min.js"
           strategy="afterInteractive"
         />
 
-        {/* ================= MAIN TEMPLATE JS ================= */}
-        {/* ✅ FIX: Load ONLY after everything */}
+        {/* ✅ MAIN JS LAST */}
         <Script src="/assets/js/app.js" strategy="lazyOnload" />
 
-        {/* ================= PAGE CONTENT ================= */}
+        {/* ================= CONTENT ================= */}
         {children}
         <FooterSection />
 
-        {/* ================= GLOBAL FIXES ================= */}
+        {/* ================= FIXES ================= */}
 
-        {/* ✅ Fix ScrollTrigger & animations not firing */}
+        {/* ScrollTrigger fix */}
         <Script id="animation-fix" strategy="afterInteractive">
           {`
             window.addEventListener('load', function () {
@@ -128,7 +126,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        {/* ✅ Debug check (optional but useful) */}
+        {/* jQuery debug */}
         <Script id="jquery-check" strategy="afterInteractive">
           {`
             window.addEventListener('load', function () {
@@ -141,7 +139,7 @@ export default function RootLayout({ children }) {
           `}
         </Script>
 
-        {/* ================= SAFE COUNTER ================= */}
+        {/* Counter safe init */}
         <Script id="counter-init" strategy="afterInteractive">
           {`
             window.addEventListener('load', function () {

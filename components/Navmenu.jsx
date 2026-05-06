@@ -45,7 +45,6 @@ export default function NavMenu() {
 
         let tl = gsap.timeline({ paused: true });
 
-        // 🔥 IMPORTANT: REMOVE display from GSAP
         tl.from(menuBaseEl, {
           opacity: 0,
           duration: 0.6,
@@ -81,7 +80,6 @@ export default function NavMenu() {
           opacity: 0,
         });
 
-        // ✅ FINAL FIXED FUNCTION
         function openMenu(open) {
           console.log("openMenu called:", open);
 
@@ -92,7 +90,6 @@ export default function NavMenu() {
           } else {
             hamburgerEl.removeClass("nav-open");
 
-            // ✅ Reverse animation smoothly
             tl.eventCallback("onReverseComplete", () => {
               console.log("Animation finished, hiding menu");
               menuWrapEl.css("display", "none");
@@ -102,7 +99,6 @@ export default function NavMenu() {
           }
         }
 
-        // ✅ HAMBURGER
         hamburgerEl.off("click").on("click", function (e) {
           e.preventDefault();
           e.stopPropagation();
@@ -116,7 +112,6 @@ export default function NavMenu() {
           }
         });
 
-        // ✅ CLICK OUTSIDE (FINAL RELIABLE)
         $(document)
           .off("click.menuClose")
           .on("click.menuClose", function (e) {
@@ -126,6 +121,7 @@ export default function NavMenu() {
             const isInsideMenu = $(e.target).closest(
               ".mxd-menu__contain",
             ).length;
+
             const isHamburger = $(e.target).closest(
               ".mxd-nav__hamburger",
             ).length;
@@ -162,9 +158,9 @@ export default function NavMenu() {
             {/* Left Side */}
             <div className="mxd-menu__left">
               <p className="mxd-menu__caption menu-fade-in">
-                🦄 Innovative design
+                🚀 RCERP TECHNOLOGIES PVT LTD
                 <br />
-                and cutting-edge development
+                Smart digital solutions for schools, startups and enterprises
               </p>
 
               <div className="main-menu">
@@ -172,120 +168,33 @@ export default function NavMenu() {
                   <ul id="main-menu" className="main-menu__accordion">
                     {/* Home */}
                     <li className="main-menu__item">
-                      <div className="main-menu__toggle">
-                        <span className="main-menu__link btn btn-anim">
-                          <span className="btn-caption">Home</span>
-                        </span>
-
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M19.6,9.6h-3.9..." />
-                        </svg>
-                      </div>
-
-                      <ul className="submenu">
-                        <li className="submenu__item active">
-                          <a href="/">Main Home</a>
-                        </li>
-
-                        <li className="submenu__item">
-                          <a href="/software-development-company">
-                            Software Development Company
-                          </a>
-                        </li>
-
-                        <li className="submenu__item">
-                          <a href="/freelancer-portfolio">
-                            Freelancer Portfolio
-                          </a>
-                        </li>
-
-                        <li className="submenu__item">
-                          <a href="/digital-agency">Digital Agency</a>
-                        </li>
-                      </ul>
+                      <a className="main-menu__link btn btn-anim" href="/">
+                        <span className="btn-caption">Home</span>
+                      </a>
                     </li>
 
                     {/* Works */}
                     <li className="main-menu__item">
-                      <div className="main-menu__toggle">
-                        <span className="main-menu__link btn btn-anim">
-                          <span className="btn-caption">Works</span>
-                        </span>
-
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                        >
-                          <path d="M19.6,9.6h-3.9..." />
-                        </svg>
-                      </div>
-
-                      <ul className="submenu">
-                        <li className="submenu__item">
-                          <a href="/works-simple">Portfolio</a>
-                        </li>
-
-                        <li className="submenu__item">
-                          <a href="/works-masonry">Works Masonry</a>
-                        </li>
-
-                        <li className="submenu__item">
-                          <a href="/project-details">Project Details</a>
-                        </li>
-                      </ul>
+                      <a className="main-menu__link btn btn-anim" href="/works">
+                        <span className="btn-caption">Works</span>
+                      </a>
                     </li>
 
-                    {/* Pages */}
+                    {/* Services */}
                     <li className="main-menu__item">
-                      <div className="main-menu__toggle">
-                        <span className="main-menu__link btn btn-anim">
-                          <span className="btn-caption">Pages</span>
-                        </span>
-                      </div>
-
-                      <ul className="submenu">
-                        <li className="submenu__item">
-                          <a href="/about-us">About Us</a>
-                        </li>
-
-                        <li className="submenu__item">
-                          <a href="/services">Services</a>
-                        </li>
-
-                        <li className="submenu__item">
-                          <a href="/team">Our Team</a>
-                        </li>
-                      </ul>
+                      <a
+                        className="main-menu__link btn btn-anim"
+                        href="/services"
+                      >
+                        <span className="btn-caption">Services</span>
+                      </a>
                     </li>
 
-                    {/* Insights */}
+                    {/* About */}
                     <li className="main-menu__item">
-                      <div className="main-menu__toggle">
-                        <span className="main-menu__link btn btn-anim">
-                          <span className="btn-caption">Insights</span>
-                        </span>
-                      </div>
-
-                      <ul className="submenu">
-                        <li className="submenu__item">
-                          <a href="/blog-standard">Blog Standard</a>
-                        </li>
-
-                        <li className="submenu__item">
-                          <a href="/blog-creative">Blog Creative</a>
-                        </li>
-
-                        <li className="submenu__item">
-                          <a href="/blog-article">Single Post</a>
-                        </li>
-                      </ul>
+                      <a className="main-menu__link btn btn-anim" href="/about">
+                        <span className="btn-caption">About</span>
+                      </a>
                     </li>
 
                     {/* Contact */}
@@ -307,12 +216,12 @@ export default function NavMenu() {
               <div className="menu-promo">
                 <div className="menu-promo__content">
                   <p className="menu-promo__caption menu-fade-in">
-                    👋 Nice to see you!
-                    <br />
-                    I'm Alex Walker, digital designer and illustrator based in
-                    Odesa, Ukraine
+                    💡 Delivering School ERP Systems, modern websites, custom
+                    web applications, mobile apps, UI/UX design and complete
+                    digital transformation solutions.
                   </p>
 
+                  {/* 
                   <div className="menu-promo__video">
                     <video
                       className="menu-video"
@@ -322,22 +231,15 @@ export default function NavMenu() {
                       loop
                       muted
                       playsInline
-                      poster="/assets/images/video-poster.jpg" // ✅ use your local image
+                      poster="/assets/images/video-poster.jpg"
                     >
                       <source
                         src="/assets/video/540x310_video.mp4"
                         type="video/mp4"
                       />
-                      <source
-                        src="/assets/video/540x310_video.webm"
-                        type="video/webm"
-                      />
-                      <source
-                        src="/assets/video/540x310_video.ogv"
-                        type="video/ogg"
-                      />
                     </video>
                   </div>
+                  */}
                 </div>
               </div>
             </div>
@@ -345,22 +247,14 @@ export default function NavMenu() {
             {/* Bottom Data */}
             <div className="mxd-menu__data menu-fade-in">
               <p className="t-xsmall">
-                Made with
+                Crafted with
                 <i className="ph-fill ph-heart t-additional"></i>
-                by
-                <a
-                  className="no-effect"
-                  href="https://1.envato.market/EKA9WD"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Mix_Design
-                </a>
+                by RCERP TECHNOLOGIES PVT LTD
               </p>
 
               <p className="t-xsmall">
                 <i className="ph ph-copyright"></i>
-                2025
+                2026 RCERP TECHNOLOGIES PVT LTD
               </p>
             </div>
           </div>

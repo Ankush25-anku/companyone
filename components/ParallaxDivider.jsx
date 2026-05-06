@@ -9,7 +9,7 @@ export default function ParallaxDivider() {
             {/* ✅ ADD IMAGE HERE */}
             <img
               className="parallax-img"
-              src="/assets/img/erp-dashboard.jpg" // <-- your image path
+              src="/assets/img/img01.jpeg" // <-- your image path
               alt="ERP Dashboard"
             />
           </div>

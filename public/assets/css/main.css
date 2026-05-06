@@ -465,7 +465,7 @@
 }
 
 .blog-preview-image-3 {
-  background-image: url("/assets/img/blog3.jpg");
+  background-image: url("/assets/img/blog33.jpg");
 }
 
 .headline-img-01::before {
@@ -489,7 +489,7 @@
 }
 
 .headline-img-06::before {
-  background-image: url(https://dummyimage.com/400x200/5d5d5d/838383);
+  background-image: url("/assets/img/blog111.jpg");
 }
 
 .headline-img-07::before {
@@ -505,11 +505,17 @@
 }
 
 .prj-details-img-01 {
-  background-image: url(https://dummyimage.com/1920x1200/414141/636363);
+  background-image: url("/assets/img/erp111.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .prj-details-img-02 {
-  background-image: url(https://dummyimage.com/1920x1200/414141/636363);
+  background-image: url("/assets/img/erp12.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* ------------------------------------------------*/
@@ -7851,6 +7857,92 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 /* Block - Hero Section #01 Start */
 /* ------------------------------------------------*/
+
+/* ✅ ICON POSITIONED RELATIVE TO MARQUEE */
+.whatsapp-floating {
+  position: absolute;
+
+  top: -55px; /* 👈 sits just above marquee */
+  right: 80px; /* 👈 align to right of purple pill */
+
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+  background: #25d366;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+
+  z-index: 9999;
+}
+
+/* ICON SIZE */
+.whatsapp-floating svg {
+  width: 28px;
+  height: 28px;
+}
+
+/* FLOAT ANIMATION */
+.whatsapp-floating {
+  animation: floatY 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatY {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+.mxd-hero-01__marquee {
+  position: absolute;
+  z-index: 5;
+}
+
+.mxd-hero-01__title-wrap {
+  position: relative;
+  z-index: 1;
+}
+
+/* icon size */
+.whatsapp-floating svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* subtle floating animation */
+.whatsapp-floating {
+  animation: floatY 2s ease-in-out infinite alternate;
+}
+
+@keyframes floatY {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+
+.whatsapp-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.hero-video {
+  mix-blend-mode: multiply;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keeps full logo visible */
+}
 .mxd-hero-section {
   padding-top: 7.6rem;
 }
@@ -7913,11 +8005,11 @@ form textarea:required:valid {
   justify-content: center;
   width: 100%;
   height: auto;
-  padding: 11.5rem 0 12.9rem 0;
+  padding: 4rem 0 6rem 0;
 }
 @media only screen and (min-width: 768px) {
   .mxd-hero-01__top {
-    padding: 12.6rem 0 14.6rem 0;
+    padding: 5rem 0 7rem 0;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -7958,10 +8050,26 @@ form textarea:required:valid {
   }
 }
 
+/* 🔥 FORCE RIGHT → LEFT */
+.marquee__toright {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 40s linear infinite;
+}
+
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .mxd-hero-01__marquee {
   position: absolute;
-  top: 7.6rem;
+  top: 1rem; /* 🔥 controls exact gap */
   right: 0;
+
   width: 100%;
   background-color: var(--accent);
   border: 1px solid var(--base);
@@ -8004,7 +8112,7 @@ form textarea:required:valid {
 }
 @media only screen and (min-width: 768px) {
   .mxd-hero-01__marquee {
-    top: 0;
+    top: 1rem;
     right: 7rem;
     width: 265px;
     height: 88px;
@@ -8227,8 +8335,13 @@ form textarea:required:valid {
   left: -20%;
 }
 .hero-01-image.image-02 {
-  top: -20%;
-  right: -1.5rem;
+  top: -10%; /* 🔥 move down */
+  right: 12%; /* 🔥 slightly right */
+  z-index: 5; /* 🔥 above marquee */
+}
+
+.mxd-hero-01__marquee {
+  z-index: 2;
 }
 .hero-01-image.image-03 {
   top: 86%;
@@ -22937,4 +23050,41 @@ form textarea:required:valid {
 .whatsapp-float svg {
   width: 30px;
   height: 30px;
+}
+
+/* container */
+.marquee {
+  overflow: hidden;
+  width: 100%;
+}
+
+/* moving track */
+.marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marqueeMove 20s linear infinite;
+}
+
+/* duplicate groups */
+.marquee__group {
+  display: flex;
+}
+
+/* item style */
+.marquee__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-right: 60px;
+  white-space: nowrap;
+}
+
+/* animation */
+@keyframes marqueeMove {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }

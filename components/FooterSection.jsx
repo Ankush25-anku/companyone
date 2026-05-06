@@ -10,13 +10,13 @@ export default function FooterSection() {
     ["Contact", "/contact"],
   ];
 
-  const socials = [
-    ["Dribbble", "https://dribbble.com/"],
-    ["Behance", "https://www.behance.net/"],
-    ["Instagram", "https://www.instagram.com/"],
-    ["Github", "https://github.com/"],
-    ["Codepen", "https://codepen.io/"],
-    ["Figma Community", "https://www.figma.com/community"],
+  const services = [
+    "School ERP Systems",
+    "Website Development",
+    "Custom Web Applications",
+    "Mobile App Development",
+    "UI/UX Design",
+    "Digital Solutions",
   ];
 
   // ✅ Smooth Scroll Function
@@ -73,10 +73,10 @@ export default function FooterSection() {
           <div className="footer-blocks__card">
             <p className="mxd-point-subtitle anim-uni-in-up">
               <a
-                href="mailto:ravichandra808@gmail.com"
+                href="mailto:ravichandra@rctechbox.com"
                 className="footer-contact-link"
               >
-                ravichandra808@gmail.com
+                ravichandra@rctechbox.com
               </a>
             </p>
           </div>
@@ -115,21 +115,14 @@ export default function FooterSection() {
           <div className="footer-blocks__card fullheight-card">
             <div className="footer-blocks__block">
               <div className="footer-blocks__title">
-                <p className="footer-blocks__title-l">Ecosystem</p>
+                <p className="footer-blocks__title-l">Our Services</p>
               </div>
 
               <div className="footer-blocks__socials">
                 <ul className="footer-socials">
-                  {socials.map((item, index) => (
+                  {services.map((item, index) => (
                     <li key={index} className="footer-socials__item">
-                      <a
-                        href={item[1]}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="footer-socials__link"
-                      >
-                        {item[0]}
-                      </a>
+                      <span className="footer-socials__link">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -138,16 +131,9 @@ export default function FooterSection() {
 
             <div className="footer-blocks__links">
               <p className="t-xsmall t-muted">
-                <a
-                  href="https://1.envato.market/EKA9WD"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="no-effect"
-                >
-                  Mix_Design
-                </a>
+                <span className="no-effect">RCERP TECHNOLOGIES PVT LTD</span>
                 <i className="ph-bold ph-copyright"></i>
-                2025
+                {new Date().getFullYear()}
               </p>
             </div>
           </div>

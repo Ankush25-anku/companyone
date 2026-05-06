@@ -8,6 +8,7 @@ export default function FeaturedProjects() {
       title: "School ERP System",
       desc: "complete management solution for institutions",
       tags: ["ERP", "School Management", "Automation"],
+      link: "/shikshaflow-erp",
     },
     {
       image: "/assets/img/erp12.jpg",
@@ -15,6 +16,7 @@ export default function FeaturedProjects() {
       title: "Business ERP Platform",
       desc: "streamlining operations with smart tools",
       tags: ["ERP", "Dashboard", "Analytics"],
+      link: "/business-erp-platform",
     },
     {
       image: "/assets/img/erp13.jpg",
@@ -22,6 +24,7 @@ export default function FeaturedProjects() {
       title: "Custom Website Development",
       desc: "modern responsive business websites",
       tags: ["Web Development", "UI/UX", "Responsive"],
+      link: "/website-development",
     },
     {
       image: "/assets/img/erp14.jpg",
@@ -29,6 +32,7 @@ export default function FeaturedProjects() {
       title: "Web Application System",
       desc: "scalable digital solutions for businesses",
       tags: ["Web App", "SaaS", "Cloud"],
+      link: "/web-application-system",
     },
     {
       image: "/assets/img/erp15.jpg",
@@ -36,6 +40,7 @@ export default function FeaturedProjects() {
       title: "Digital Solutions & Automation",
       desc: "improving workflow and productivity",
       tags: ["Automation", "Integration", "Solutions"],
+      link: "/digital-solutions",
     },
   ];
 
@@ -75,7 +80,7 @@ export default function FeaturedProjects() {
                           <div className="col-12 mxd-grid-item no-margin">
                             <div className="mxd-section-title__controls anim-uni-in-up">
                               <a
-                                href="/works-simple"
+                                href="/view"
                                 className="btn btn-anim btn-default btn-outline slide-right-up"
                               >
                                 <span className="btn-caption">View All</span>
@@ -95,7 +100,7 @@ export default function FeaturedProjects() {
                     {projects.map((project, index) => (
                       <div className="mxd-project-item" key={index}>
                         <a
-                          href="/project-details"
+                          href={project.link}
                           className="mxd-project-item__media anim-uni-in-up"
                         >
                           <div className="mxd-project-item__preview">
@@ -119,10 +124,7 @@ export default function FeaturedProjects() {
 
                         <div className="mxd-project-item__promo">
                           <div className="mxd-project-item__name">
-                            <a
-                              href="/project-details"
-                              className="anim-uni-in-up"
-                            >
+                            <a href={project.link} className="anim-uni-in-up">
                               <span>{project.title}</span> {project.desc}
                             </a>
                           </div>

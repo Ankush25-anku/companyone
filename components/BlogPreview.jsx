@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function BlogPreview() {
   const posts = [
     {
@@ -7,63 +9,62 @@ export default function BlogPreview() {
       title1: "How School ERP Systems",
       title2: "improve daily operations",
       tags: ["ERP", "School Management"],
+      link: "/blog1",
     },
     {
       image: "blog-preview-image-2",
       title1: "Building modern business websites",
       title2: "for growth and visibility",
       tags: ["Web Development", "Business"],
+      link: "/blog2",
     },
     {
       image: "blog-preview-image-3",
       title1: "Why digital solutions matter",
       title2: "for business efficiency",
       tags: ["Automation", "Software"],
+      link: "/blog3",
     },
   ];
 
   return (
     <div className="mxd-section padding-blog">
       <div className="mxd-container grid-container">
-        {/* Title */}
+        {/* TITLE */}
         <div className="mxd-block">
           <div className="mxd-section-title pre-grid">
             <div className="container-fluid p-0">
               <div className="row g-0">
                 <div className="col-12 col-xl-5 mxd-grid-item no-margin">
-                  <div className="mxd-section-title__hrtitle">
-                    <h2 className="reveal-type anim-uni-in-up">
-                      Insights & Updates
-                    </h2>
-                  </div>
+                  <h2 className="reveal-type anim-uni-in-up">
+                    Insights & Updates
+                  </h2>
                 </div>
 
                 <div className="col-12 col-xl-4 mxd-grid-item no-margin">
-                  <div className="mxd-section-title__hrdescr">
-                    <p className="anim-uni-in-up">
-                      Explore insights on ERP systems, website development, and
-                      digital solutions for businesses and institutions.
-                    </p>
-                  </div>
+                  <p className="anim-uni-in-up">
+                    Explore insights on ERP systems, website development, and
+                    digital solutions.
+                  </p>
                 </div>
 
                 <div className="col-12 col-xl-3 mxd-grid-item no-margin">
-                  <div className="mxd-section-title__hrcontrols">
-                    <a
-                      href="/blog-standard"
-                      className="btn btn-anim btn-default btn-outline slide-right-up"
-                    >
-                      <span className="btn-caption">View All</span>
-                      <i className="ph-bold ph-arrow-up-right"></i>
-                    </a>
-                  </div>
+                  <Link
+                    href="/blog-standard"
+                    className="btn btn-anim btn-default btn-outline slide-right-up"
+                  >
+                    <span className="btn-caption">View All</span>
+
+                    {/* ✅ FIX: remove risky SVG/icon */}
+                    <span style={{ marginLeft: "6px" }}>→</span>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Blog Cards */}
+        {/* BLOG CARDS */}
         <div className="mxd-block">
           <div className="mxd-blog-preview">
             <div className="container-fluid p-0">
@@ -73,20 +74,21 @@ export default function BlogPreview() {
                     key={index}
                     className="col-12 col-xl-4 mxd-blog-preview__item mxd-grid-item animate-card-3"
                   >
-                    <a href="/blog-article" className="mxd-blog-preview__media">
+                    {/* IMAGE */}
+                    <Link
+                      href={post.link || "#"} // ✅ safe fallback
+                      className="mxd-blog-preview__media"
+                    >
                       <div
                         className={`mxd-blog-preview__image ${post.image} parallax-img-small`}
-                      ></div>
+                      />
 
+                      {/* 👁️ ICON FIX */}
                       <div className="mxd-preview-hover">
-                        <i className="mxd-preview-hover__icon">
-                          <img
-                            src="assets/img/icons/icon-eye.svg"
-                            alt="Eye Icon"
-                          />
-                        </i>
+                        <span className="mxd-preview-hover__icon">👁️</span>
                       </div>
 
+                      {/* TAGS */}
                       <div className="mxd-blog-preview__tags">
                         {post.tags.map((tag, i) => (
                           <span
@@ -97,12 +99,16 @@ export default function BlogPreview() {
                           </span>
                         ))}
                       </div>
-                    </a>
+                    </Link>
 
+                    {/* TITLE */}
                     <div className="mxd-blog-preview__data">
-                      <a href="/blog-article" className="anim-uni-in-up">
+                      <Link
+                        href={post.link || "#"} // ✅ safe fallback
+                        className="anim-uni-in-up"
+                      >
                         <span>{post.title1}</span> {post.title2}
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 ))}

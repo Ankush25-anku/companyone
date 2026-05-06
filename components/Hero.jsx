@@ -1,6 +1,6 @@
 "use client";
 
-export default function HeroSection() {
+export default function Hero() {
   const socials = ["Dribbble", "Behance", "Instagram"];
 
   return (
