@@ -25,7 +25,7 @@ export default function StatsCards() {
                     <div className="mxd-stats-cards__btngroup">
                       <a
                         className="btn btn-anim btn-default btn-outline opposite slide-right-up"
-                        href="/about-us"
+                        href="/about"
                       >
                         <span className="btn-caption">About Us</span>
                         <i className="ph-bold ph-arrow-up-right"></i>
@@ -94,7 +94,7 @@ export default function StatsCards() {
                     <div className="mxd-stats-cards__btngroup">
                       <a
                         className="btn btn-anim btn-default btn-outline slide-right-up"
-                        href="/works-simple"
+                        href="/works"
                       >
                         <span className="btn-caption">Our Work</span>
                         <i className="ph-bold ph-arrow-up-right"></i>

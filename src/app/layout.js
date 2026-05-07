@@ -5,6 +5,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import NavMenu from "../../components/Navmenu";
 import Header from "../../components/Header";
 import FooterSection from "../../components/FooterSection";
+import Preloader from "../../components/Preloader";
 
 export const metadata = {
   title: "RCERP TECHNOLOGIES PVT LTD",
@@ -39,6 +40,7 @@ export default function RootLayout({ children }) {
 
       <body suppressHydrationWarning={true}>
         {/* ================= CORE ================= */}
+        <Preloader />
         <NavMenu />
         <Header />
 

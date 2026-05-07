@@ -3,7 +3,7 @@
 export default function FeaturedProjects() {
   const projects = [
     {
-      image: "/assets/img/erp11.jpg",
+      image: "/assets/img/img0123.Avif",
       preview: "preview-image-1",
       title: "School ERP System",
       desc: "complete management solution for institutions",
@@ -11,7 +11,7 @@ export default function FeaturedProjects() {
       link: "/shikshaflow-erp",
     },
     {
-      image: "/assets/img/erp12.jpg",
+      image: "/assets/img/img55.jpg",
       preview: "preview-image-2",
       title: "Business ERP Platform",
       desc: "streamlining operations with smart tools",
@@ -19,7 +19,7 @@ export default function FeaturedProjects() {
       link: "/business-erp-platform",
     },
     {
-      image: "/assets/img/erp13.jpg",
+      image: "/assets/img/erp133.jpg",
       preview: "preview-image-3",
       title: "Custom Website Development",
       desc: "modern responsive business websites",

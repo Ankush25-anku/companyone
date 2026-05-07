@@ -45,7 +45,7 @@ const Contact1 = () => {
                     {/* ✅ UPDATED EMAIL */}
                     <a
                       className="btn btn-line-headline slide-right-up anim-no-delay"
-                      href="mailto:ravichandra808@gmail.com?subject=Project Inquiry"
+                      href="mailto:ravichandra@rctechbox.com?subject=Project Inquiry"
                     >
                       <span
                         className="btn-caption"
@@ -55,7 +55,7 @@ const Contact1 = () => {
                           maxWidth: "100%",
                         }}
                       >
-                        ravichandra808@gmail.com
+                        ravichandra@rctechbox.com
                       </span>
                       <i className="ph-bold ph-arrow-up-right"></i>
                     </a>
