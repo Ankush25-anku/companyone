@@ -5,7 +5,7 @@ export default function TestimonialsSlider() {
     {
       name: "Ravi Kumar",
       role: "Administrator",
-      company: "ABC School",
+      company: "Fuscos School",
       text: "RCERP TECHNOLOGIES delivered a powerful school ERP system that simplified our daily operations like attendance, fees, and reporting. It has saved us a lot of time and effort.",
     },
     {
@@ -75,20 +75,29 @@ export default function TestimonialsSlider() {
                           <div className="mxd-testimonials-card bg-base-tint radius-m">
                             <div className="mxd-testimonials-card__content">
                               <div className="mxd-testimonials-card__media">
-                                <div className="mxd-testimonials-card__photo">
-                                  <img
-                                    src="https://dummyimage.com/300x300/5d5d5d/737373"
-                                    alt="Author"
-                                  />
+                                <div
+                                  className="mxd-testimonials-card__photo d-flex align-items-center justify-content-center"
+                                  style={{
+                                    width: "120px",
+                                    height: "120px",
+                                  }}
+                                >
+                                  <i
+                                    className="ph-fill ph-user-circle"
+                                    style={{
+                                      fontSize: "120px",
+                                      color: "#111",
+                                      lineHeight: 1,
+                                    }}
+                                  ></i>
                                 </div>
-
                                 <div className="mxd-testimonials-card__company"></div>
                               </div>
 
                               <div className="mxd-testimonials-card__text">
                                 <p>{item.text}</p>
 
-                                <a
+                                {/* <a
                                   href="#0"
                                   className="btn btn-anim btn-default btn-small btn-outline"
                                 >
@@ -96,7 +105,7 @@ export default function TestimonialsSlider() {
                                     View Project
                                   </span>
                                   <i className="ph ph-arrow-up-right"></i>
-                                </a>
+                                </a> */}
                               </div>
                             </div>
 

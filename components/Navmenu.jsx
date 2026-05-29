@@ -173,10 +173,11 @@ export default function NavMenu() {
                       </a>
                     </li>
 
-                    {/* Works */}
+                    {/* About */}
+
                     <li className="main-menu__item">
-                      <a className="main-menu__link btn btn-anim" href="/works">
-                        <span className="btn-caption">Works</span>
+                      <a className="main-menu__link btn btn-anim" href="/about">
+                        <span className="btn-caption">About</span>
                       </a>
                     </li>
 
@@ -190,10 +191,10 @@ export default function NavMenu() {
                       </a>
                     </li>
 
-                    {/* About */}
+                    {/* Works */}
                     <li className="main-menu__item">
-                      <a className="main-menu__link btn btn-anim" href="/about">
-                        <span className="btn-caption">About</span>
+                      <a className="main-menu__link btn btn-anim" href="/works">
+                        <span className="btn-caption">Works</span>
                       </a>
                     </li>
 

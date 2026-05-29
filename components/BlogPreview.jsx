@@ -50,7 +50,7 @@ export default function BlogPreview() {
 
                 <div className="col-12 col-xl-3 mxd-grid-item no-margin">
                   <Link
-                    href="/blog-standard"
+                    href="/view"
                     className="btn btn-anim btn-default btn-outline slide-right-up"
                   >
                     <span className="btn-caption">View All</span>

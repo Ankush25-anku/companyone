@@ -58,7 +58,7 @@ export default function AwardsPublications() {
                       href="/about-us"
                       className="btn btn-anim btn-default btn-outline slide-right-up"
                     >
-                      <span className="btn-caption">View More</span>
+                      {/* <span className="btn-caption">View More</span> */}
                       <i className="ph-bold ph-arrow-up-right"></i>
                     </a>
                   </div>
