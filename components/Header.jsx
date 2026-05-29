@@ -23,15 +23,6 @@ export default function Header() {
 
       {/* header controls */}
       <div className="mxd-header__controls loading__fade">
-        <button
-          id="color-switcher"
-          className="mxd-color-switcher"
-          type="button"
-          role="switch"
-          aria-label="light/dark mode"
-          aria-checked="true"
-        ></button>
-
         <a
           className="btn btn-anim btn-default btn-mobile-icon btn-outline slide-right-up"
           href="/contact"

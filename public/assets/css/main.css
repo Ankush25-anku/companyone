@@ -2447,7 +2447,7 @@ p.t-semibold {
 /* ------------------------------------------------*/
 /* Elements - Controls Start */
 /* ------------------------------------------------*/
-.mxd-color-switcher {
+/* .mxd-color-switcher {
   position: relative;
   display: -webkit-inline-box;
   display: -moz-inline-box;
@@ -2559,7 +2559,7 @@ p.t-semibold {
   .mxd-color-switcher i {
     font-size: 3rem;
   }
-}
+} */
 
 .btn-rotating {
   display: -webkit-inline-box;
